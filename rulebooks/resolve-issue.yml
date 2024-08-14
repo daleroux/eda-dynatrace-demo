@@ -18,11 +18,3 @@
             extra_vars:
               my_payload: "{{ event.rootCauseEntity.name }}"
 
-    - name: Problem payload Dynatrace for Memory saturation issue
-      condition: event.title contains "Memory saturation"
-        run_job_template:
-          name: Fix_high_memory
-          organization: Default
-          job_args:
-            extra_vars:
-              my_payload: "{{ event.rootCauseEntity.name }}"
