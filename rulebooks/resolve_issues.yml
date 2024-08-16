@@ -12,8 +12,8 @@
       condition: event.title contains "CPU saturation"
       action:
         run_job_template:
-          name: dleroux Fix_high_cpu
-          organization: dleroux
+          name: Fix_high_cpu
+          organization: Default
           job_args:
             extra_vars:
               my_payload: "{{ event.rootCauseEntity.name }}"
