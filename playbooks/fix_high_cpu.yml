@@ -1,15 +1,14 @@
 ---
 - name: Restart Apache server
-  hosts: "{{ ansible_eda.event.rootCauseEntity.name }}"
-  become: true
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    eda_input: "{{ ansible_eda.event.payload }}"  # access event payload
+
   tasks:
 
-    - name: Execute fix_cpu.sh
-      command: /usr/local/bin/fix_cpu.sh
-      register: script_output
-      ignore_errors: yes  # Optional: Continue even if the script fails
+    - name: Print out the payload
+      ansible.builtin.debug:
+        msg: "{{ eda_input }}"
 
-    - name: Display the output of the script
-      debug:
-        var: script_output.stdout
-      

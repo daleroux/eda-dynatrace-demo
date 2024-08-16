@@ -1,0 +1,17 @@
+---
+- name: Restart Apache server
+  hosts: localhost
+  gather_facts: false
+  tasks:
+
+    - name: Display Dynatrace Host
+      debug:
+        msg: "Dynatrace Host: {{ dynatrace_host }}"
+
+    - name: Display Dynatrace Token
+      debug:
+        msg: "Dynatrace Token: {{ dynatrace_token }}"
+
+    - name: Display Dynatrace Delay
+      debug:
+        msg: "Dynatrace Delay: {{ dynatrace_delay }}"  
