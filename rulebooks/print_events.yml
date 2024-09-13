@@ -8,7 +8,7 @@
         delay: "{{ dynatrace_delay }}"
 
   rules:
-    - name: Print everything when you receive an event
+    - name: Print the payload  when you receive an event
       condition: event.title is defined
       actions:
         - debug:
