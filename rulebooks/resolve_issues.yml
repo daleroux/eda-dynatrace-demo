@@ -17,4 +17,3 @@
           job_args:
             extra_vars:
               my_payload: "{{ event.rootCauseEntity.name }}"
-
