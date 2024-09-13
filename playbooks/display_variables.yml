@@ -5,13 +5,13 @@
   tasks:
 
     - name: Display Dynatrace Host
-      debug:
+      ansible.builtin.debug:
         msg: "Dynatrace Host: {{ dynatrace_host }}"
 
     - name: Display Dynatrace Token
-      debug:
+      ansible.builtin.debug:
         msg: "Dynatrace Token: {{ dynatrace_token }}"
 
     - name: Display Dynatrace Delay
-      debug:
-        msg: "Dynatrace Delay: {{ dynatrace_delay }}"  
+      ansible.builtin.debug:
+        msg: "Dynatrace Delay: {{ dynatrace_delay }}"

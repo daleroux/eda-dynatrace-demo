@@ -6,4 +6,4 @@ exclude_paths:
   - hosts
   - README.md
   - .ansible-lint
-  - password
+  - playbooks/work_in_progress.yml

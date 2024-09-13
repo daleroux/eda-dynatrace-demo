@@ -11,4 +11,3 @@
     - name: Print out the payload
       ansible.builtin.debug:
         msg: "{{ eda_input }}"
-
