@@ -15,3 +15,5 @@
     - name: Display Dynatrace Delay
       ansible.builtin.debug:
         msg: "Dynatrace Delay: {{ dynatrace_delay }}"
+
+
