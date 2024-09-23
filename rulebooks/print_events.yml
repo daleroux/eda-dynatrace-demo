@@ -13,6 +13,3 @@
       actions:
         - debug:
             msg: "{{ event }}"
-
-
-
