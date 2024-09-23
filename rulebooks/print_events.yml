@@ -12,4 +12,4 @@
       condition: event.title is defined
       actions:
         - debug:
-            msg: "{{ event }}"
+            msg: "{{ event }}"  
