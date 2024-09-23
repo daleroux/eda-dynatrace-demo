@@ -3,7 +3,7 @@ name: Ansible Lint
 on:
   push:
     branches:
-      - "main"
+      - main
       - "feature/*"
       - "release/v*"
       - "stable"
@@ -11,8 +11,8 @@ on:
     branches:
       - "main"
       - "feature/*"
-       - "release/v*"
-       - "stable"
+      - "release/v*"
+      - "stable"
 
 jobs:
   lint:
