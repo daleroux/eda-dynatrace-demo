@@ -3,17 +3,29 @@ name: Ansible Lint
 on:
   push:
     branches:
-      - main
+      - "main"
       - "feature/*"
       - "release/v*"
       - "stable"
   pull_request:
-    branches: ["main", "stable", "release/v*", "feature/*"]
+    branches:
+      - "main"
+      - "feature/*"
+       - "release/v*"
+       - "stable"
+
 jobs:
-  build:
-    name: Ansible Lint # Naming the build is important to use it as a status check
+  lint:
+    name: Ansible Lint # This is the linting job that acts as a required check
     runs-on: ubuntu-latest
+
     steps:
+      # Step 1: Check out the code from the repository  
       - uses: actions/checkout@v4
+
+      # Step 2: Run ansible-lint
       - name: Run ansible-lint
-        uses: ansible/ansible-lint@main # or version tag instead of 'main'
+        uses: ansible/ansible-lint@main # You can use a specific version tag instead of 'main'
+        continue-on-error: false # Ensure that the workflow fails if ansible-lint returns a non-zero exit code (this is default behavior, but for clarity)
+
+    # The job will automatically fail if `ansible-lint` encounters errors.
