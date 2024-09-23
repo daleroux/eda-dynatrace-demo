@@ -16,15 +16,15 @@
 - Once you have at least obtained a trial Dynatrace Instance, on the Dynatrace web UI:
 
   - Use the Search function to search for **Deploy OneAgent**
-  
+
   ![Screenshot from 2024-09-19 03-27-36](https://github.com/user-attachments/assets/ba285338-c3eb-4669-af10-31fa309581f4)
 
   - On the **Download Dynatrace OneAgent** screen, choose the appropriate OS installation instructions.
-  
+
   ![Screenshot from 2024-09-19 03-27-59](https://github.com/user-attachments/assets/0614d3e9-02f4-4740-818a-96f766d1c00b)
 
   - In my example, I chose the **Linux** option.
-  
+
   ![Screenshot from 2024-09-19 03-28-20](https://github.com/user-attachments/assets/901aaedf-2326-40ae-b8c9-a98dbeececd9)
 
   - Choose **Create token** on this installation page.
@@ -117,7 +117,7 @@ def run_stress_on_all_cores():
     num_cores = multiprocessing.cpu_count()
     print(f"Spawning {num_cores} processes to fully utilize the CPU")
     processes = []
-    
+
     try:
         for _ in range(num_cores):
             p = multiprocessing.Process(target=cpu_stress)
@@ -140,5 +140,5 @@ if __name__ == "__main__":
 
   ![Screenshot from 2024-09-19 03-32-09](https://github.com/user-attachments/assets/17200abe-f5f1-4b37-990d-ae66977949d1)
 
-  
+
 - This will send an event sent to the EDA controller which will trigger the action of the rulebook.

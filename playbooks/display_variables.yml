@@ -6,14 +6,14 @@
 
     - name: Display Dynatrace Host
       ansible.builtin.debug:
-        msg: "Dynatrace Host: {{ dynatrace_host }}"   
+        msg: "Dynatrace Host: {{ dynatrace_host }}"
 
     - name: Display Dynatrace Token
       ansible.builtin.debug:
-        msg: "Dynatrace Token: {{ dynatrace_token }}"   
+        msg: "Dynatrace Token: {{ dynatrace_token }}"
 
     - name: Display Dynatrace Delay
       ansible.builtin.debug:
-        msg: "Dynatrace Delay: {{ dynatrace_delay }}"   
+        msg: "Dynatrace Delay: {{ dynatrace_delay }}"
 
 
