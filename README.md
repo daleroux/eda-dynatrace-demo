@@ -6,6 +6,7 @@
 - [Dynatrace OneAgent](https://www.dynatrace.com/platform/oneagent/) deployed on a VM to serve as the managed node.
 
 **Environment overview**
+
 - In my example environment, I have three RHEL 9 VMs for my Ansible Automation Platform test environment:
   - Automation Controller
   - Private Automation Hub
