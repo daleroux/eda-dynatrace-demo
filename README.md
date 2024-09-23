@@ -1,8 +1,8 @@
 ## Instructions for Dynatrace w/ Event-Driven Ansible Demo
 
 **Prerequisites:**
-- In order to set up this lab, you will have to build a decision environment for the Event-Driven Ansible controller.
-Decision environments are container images on which to run Ansible rulebooks. (See "Setting up the Event-Driven Ansible environment" below.)
+- In order to set up this lab, you will have to build a decision environment for the Event-Driven Ansible controller.Decision environments are container images on which to run Ansible rulebooks. (See "Setting up the Event-Driven Ansible environment" below.)
+
 - [Dynatrace OneAgent](https://www.dynatrace.com/platform/oneagent/) deployed on a VM to serve as the managed node.
 
 **Environment overview**
