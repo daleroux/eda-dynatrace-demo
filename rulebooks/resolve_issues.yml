@@ -17,3 +17,5 @@
           job_args:
             extra_vars:
               my_payload: "{{ event.rootCauseEntity.name }}"
+
+  ## This rulebook is a work in progress.
