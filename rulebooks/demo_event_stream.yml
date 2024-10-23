@@ -1,5 +1,5 @@
 ---
-- name: Watching for Problems on Dynatrace
+- name: Demo of a rulebook using an event stream
   hosts: all
   sources:
     - template:
@@ -10,4 +10,4 @@
       condition: event.payload is defined
       actions:
         - debug:
-            msg: "{{ event }}"
+            msg: ">>>>>>>>>>>>>>>>  {{ event }}"
