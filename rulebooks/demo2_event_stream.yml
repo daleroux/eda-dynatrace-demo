@@ -1,0 +1,19 @@
+- name: Demo of a rulebook using an event stream and stop once the condition is met
+  hosts: all
+  sources:
+    - template:
+        delay: 5
+
+  vars:
+    event_received: false  # A tracking variable
+
+  rules:
+    - name: Print the payload and exit after receiving the first event
+      condition: event.payload is defined and vars.event_received == false
+      actions:
+        - debug:
+            msg: ">>>>>>>>>>>>>>>>  {{ event }}"
+        - set_fact:
+            event_received: true  # Mark that the event has been processed
+        - ansible.builtin.meta: end_play  # Exit the play after condition is met
+
