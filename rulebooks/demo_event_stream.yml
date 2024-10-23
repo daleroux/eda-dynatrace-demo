@@ -1,0 +1,10 @@
+---
+- name: Watching for Problems on Dynatrace
+  hosts: all
+
+  rules:
+    - name: Print the payload you receive an event
+      condition: event_name is defined
+      actions:
+        - debug:
+            msg: "{{ event }}"
