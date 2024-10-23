@@ -1,11 +1,12 @@
-- name: Demo of a rulebook using an event stream and stop once the condition is met
+---
+- name: Demo of a rulebook using an event stream and exit once condition is met
   hosts: all
   sources:
     - template:
         delay: 5
 
   vars:
-    event_received: false  # A tracking variable
+    event_received: false  # Track event status
 
   rules:
     - name: Print the payload and exit after receiving the first event
@@ -14,6 +15,8 @@
         - debug:
             msg: ">>>>>>>>>>>>>>>>  {{ event }}"
         - set_fact:
-            event_received: true  # Mark that the event has been processed
-        - meta: 
-            end_play: true  # Ensure it's correctly nested as an action
+            event_received: true  # Mark the event as processed
+        - shutdown:
+            delay: 0.125  # Short delay before shutdown
+            message: "Shutting down after processing the first event"
+
