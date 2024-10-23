@@ -5,18 +5,13 @@
     - template:
         delay: 5
 
-  vars:
-    event_received: false  # Track event status
-
   rules:
-    - name: Print the payload and exit after receiving the first event
-      condition: event.payload is defined and vars.event_received == false
+    - name: Print the payload and exit after first event
+      condition: event.payload is defined
       actions:
         - debug:
             msg: ">>>>>>>>>>>>>>>>  {{ event }}"
-        - set_fact:
-            event_received: true  # Mark the event as processed
         - shutdown:
-            delay: 0.125  # Short delay before shutdown
-            message: "Shutting down after processing the first event"
+            delay: 0.125
+            message: "Shutting down after processing the event"
 
