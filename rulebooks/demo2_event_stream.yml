@@ -15,5 +15,4 @@
             msg: ">>>>>>>>>>>>>>>>  {{ event }}"
         - set_fact:
             event_received: true  # Mark that the event has been processed
-        - ansible.builtin.meta: end_play  # Exit the play after condition is met
-
+        - meta: end_play  # Exit the play after condition is met
