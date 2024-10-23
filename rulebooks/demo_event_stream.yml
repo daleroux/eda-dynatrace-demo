@@ -7,7 +7,7 @@
 
   rules:
     - name: Print the payload you receive an event
-      condition: event.payload.event_name == "push"
+      condition: event.payload is defined
       actions:
         - debug:
             msg: "{{ event }}"
