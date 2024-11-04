@@ -1,5 +1,5 @@
 ---
-- name: Watching for Problems on Dynatrace
+- name: Print event payload ( for EE as code / testing )
   hosts: all
   sources:
   - template:
